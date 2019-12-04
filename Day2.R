@@ -19,15 +19,14 @@ day2_prog <- function(day2, init = 0) {
   v1 <- day2[init + 2, ]
   v2 <- day2[init + 3, ]
   v3 <- day2[init + 4, ]
-  if (v0 == 99) {
-    return(day2)
-  }
   if (v0 == 1) {
     e <- day2[v1 + 1,] + day2[v2 + 1,]
     day2[v3 + 1,] <- e
   } else if (v0 == 2) {
     u <- day2[v1 + 1, ] * day2[v2 + 1, ]
     day2[v3 + 1, ] <- u
+  } else if (v0 == 99) {
+    return(day2)
   }
   day2_prog(day2, init + 4)
 }
@@ -38,4 +37,19 @@ day2_prog(day2)[1,]
 # By setting init=0 I kept getting errors due to the fact that arrays in R are 1 based and not 0 based like in python.
 
 
+out <- 19690720
+day2_2 <- day2
+
+
+for(i in 1:99){
+  res <- day2_prog(day2_2)[1,]
+  
+  if(day2_prog(day2_2)[1,] == out) {
+    day2_2[2,] <- noun
+    verb[3,] <- verb
+  }
+}
+
+an <- 100 * noun  + verb
+cat("this is the answer:", an)
 
