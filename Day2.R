@@ -34,7 +34,8 @@ day2_prog <- function(day2, init = 0) {
 
 day2_prog(day2)[1,]
 
-#### This problem took me about a day in a half. I had the correct idea that would have worked in a different language like Python. By setting init=0 I kept getting errors due to the fact that arrays in R are 1 based and not 0 based like in python.
+# This problem took me about a day in a half. I had the correct idea that would have worked in a different language like Python. 
+# By setting init=0 I kept getting errors due to the fact that arrays in R are 1 based and not 0 based like in python.
 
 
 
