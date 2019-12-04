@@ -32,7 +32,6 @@ for(i in fm) {
     if(i>=0)
     fuel_fuel <- c(fuel_fuel, i)
   }
-  # fuel_fuel <- fuel_fuel[! fuel_fuel %in% fuel]
   ftotal <- c(ftotal, sum(fuel))
   fftotal <- c(fftotal,sum(fuel_fuel))
 }
